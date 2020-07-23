@@ -93,5 +93,22 @@ module.exports = controller = {
                 error: error
             })
         }
+    },
+
+    findOne: async (req,res,next) => {
+        try {
+            let index = req.params.index
+            let animals = await Animal.findById(index)
+            return res.status(200).json({
+                success: true,
+                message: 'animals findOne',
+                data: animals
+            })
+        } catch (err) {
+            return res.status(500).json({
+                success: false,
+                message: 'Server error'
+            })
+        }
     }
 }
