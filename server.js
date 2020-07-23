@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(express.urlencoded( {extended: true} ))
 
 app.use(cors({
-    origin: 'http://alvislim.github.io/animalshelter-client/'
+    origin: 'https://alvislim.github.io/animalshelter-client/'
 }))
 
 require('./db')
