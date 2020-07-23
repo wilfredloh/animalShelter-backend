@@ -7,7 +7,7 @@ module.exports = connectDB = async () => {
             useCreateIndex: true,
             useUnifiedTopology: true
         })
-        console.log(`DB connected: ${mongoURI}`)
+        console.log(`DB connected: ${process.env.MONGODB_URI}`)
     } catch (err) {
         console.log(`Error: ${err.message}`)
         process.exit(1)
